@@ -2,6 +2,9 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  const onClick2 = () => {
+    const secret = process.env.REACT_APP_SECRET;
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -9,14 +12,6 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {process.env.REACT_APP_SECRET}
-        </a>
       </header>
     </div>
   );
