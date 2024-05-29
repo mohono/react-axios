@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {process.env.secret}
+          {process.env.REACT_APP_SECRET}
         </a>
       </header>
     </div>
