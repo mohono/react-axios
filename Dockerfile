@@ -5,5 +5,5 @@ COPY src/ /react-docker-example/src
 COPY package.json /react-docker-example/
 RUN npm install
 EXPOSE 3000
-ENV secret=my-very-secret-key
+ENV secret=mySecret1234
 CMD ["npm", "start"]
