@@ -1,9 +1,14 @@
-FROM node:18-alpine
-WORKDIR /react-docker-example/
-COPY public/ /react-docker-example/public
-COPY src/ /react-docker-example/src
-COPY package.json /react-docker-example/
+FROM node:22.2.0-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+
+# RUN npm ci
 RUN npm install
-EXPOSE 3000
-ENV secret=mySecret1234
-CMD ["npm", "start"]
+
+COPY . .
+
+EXPOSE $PORT
+
+CMD ["npm", "run", "start"]
